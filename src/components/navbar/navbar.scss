@@ -1,0 +1,167 @@
+.navbar {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+  &.scrolled {
+    background-color: var(--main-color);
+  }
+
+  .container {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 25px;
+        margin-right: 40px;
+      }
+
+      span {
+        margin-right: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .search {
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        opacity: .75;
+
+        .icon {
+          // float: right;
+          height: 34px;
+          margin: 0;
+          padding: 0 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: inherit;
+        }
+
+        @keyframes loadSearchInput {
+          from {
+            width: 0;
+          }
+
+          to {
+            width: 212px;
+          }
+        }
+
+
+        .input-wrapper {
+          display: flex;
+        }
+
+        .input-wrapper.active {
+          // display: flex;
+          background-color: rgba(0, 0, 0, .75);
+          position: relative;
+        }
+
+        .input-wrapper.non-active {
+          display: none;
+        }
+
+        input {
+          font-size: 14px;
+          border: none;
+          outline: none;
+          color: white;
+          animation: loadSearchInput 300ms ease-in;
+          height: 34px;
+          line-height: 34px;
+          width: 210px;
+          background-color: rgba(0, 0, 0, .75);
+          padding-left: 5px;
+
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+
+      }
+
+      .notifications-wrapper {
+        height: 34px;
+        position: relative;
+        margin-right: 5px !important;
+        margin-left: 5px !important;
+
+        .show-me {
+          position: absolute;
+          top: 50px;
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .profile-wrapper {
+        display: flex;
+        margin-left: 6px;
+      }
+
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+      }
+
+      img.avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .profile {
+        .options {
+          display: none;
+          background-color: var(--main-color);
+          border-radius: 5px;
+
+          .changeColor {
+            color: inherit;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 1px solid gray;
+          }
+
+          .changeColor:hover {
+            text-decoration: underline;
+          }
+        }
+
+        span {
+          color: inherit;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}

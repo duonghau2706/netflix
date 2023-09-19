@@ -1,0 +1,28 @@
+.manage {
+    height: 100vh;
+    background-color: #141414;
+
+    .title {
+        font-size: 45px;
+        color: white;
+        cursor: default;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .btn-finish {
+        margin-top: 15px;
+        border: none;
+        padding: 10px 18px;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .btn-finish:hover {
+        background: #c00;
+        color: #fff;
+    }
+}

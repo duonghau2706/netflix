@@ -1,0 +1,39 @@
+.notificationsItem {
+    box-sizing: border-box;
+    width: 408px;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 18px;
+    border-top: 2px solid #CCCCCC;
+    margin-top: 1px;
+    background-color: rgba(0, 0, 0, .8);
+    cursor: pointer;
+    z-index: 1;
+
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+
+    img {
+        border-radius: 2px;
+    }
+
+    .notificationsItem-wrapper {
+        width: 248px;
+        display: flex;
+        flex-direction: column;
+
+        .notificationsItem-content {
+            font-size: 15px;
+            color: #CCCCCC;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notificationsItem-subcontent {
+            color: #808080;
+        }
+    }
+}

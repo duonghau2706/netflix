@@ -1,0 +1,69 @@
+.bg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.upload {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: url('https: //images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .upload-content {
+        display: flex;
+        margin-top: 100px;
+        height: 100%;
+
+        .img {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 80%;
+                height: 80%;
+            }
+        }
+
+        .note {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+            div {
+                width: 250px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+
+                &:last-child {
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: end;
+
+                    span {
+                        padding: 6px;
+                        background-color: rgb(13, 209, 13);
+                        border-radius: 2px;
+                        margin-left: 7px;
+
+                        &:last-child {
+                            background-color: red;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
